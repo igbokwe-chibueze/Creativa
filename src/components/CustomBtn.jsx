@@ -6,9 +6,9 @@ const CustomBtn = ({
   label,
   showLabelOnHover,
   iconURL,
-  backgroundColor,
-  textColor,
-  borderColor,
+  backgroundStyle,
+  textStyle,
+  borderStyle,
   btnType,
   onBtnClick,
   disabled,
@@ -21,21 +21,20 @@ const CustomBtn = ({
 
   return (
     <button
-      className={`z-20 flex justify-center items-center border gap-4 group
-      text-lg tablet:text-2xl font-bold leading-none rounded-full
-      hover:bg-[#6BC800] disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
-      ${
-        backgroundColor
-          ? `${backgroundColor} ${textColor} ${borderColor}`
-          : "bg-chartreuse-color text-midnight-green border-midnight-green"
-      }`}
+      className={`inline-flex items-center justify-center px-5 py-3
+        rounded-lg focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900
+        disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
+        ${backgroundStyle ? `${backgroundStyle}` : "bg-blue-700 hover:bg-blue-800"}
+        ${textStyle ? `${textStyle}` : "text-white text-base font-medium text-center"} 
+        ${borderStyle ? `${borderStyle}` : "border border-red-300" } 
+      `}
       type={btnType || "button"}
       onClick={handleClick}
       disabled={disabled}
     >
-      <div className={showLabelOnHover ? "hidden group-hover:flex" : ""}>
+      <p className={showLabelOnHover ? "hidden group-hover:flex" : ""}>
         {label || "See More"}
-      </div>
+      </p>
 
       {/* Use the iconUrl if i want to use an svg icon */}
       {iconURL && (
@@ -58,9 +57,9 @@ CustomBtn.propTypes = {
   label: PropTypes.string,
   showLabelOnHover: PropTypes.bool,
   iconURL: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
-  borderColor: PropTypes.string,
+  backgroundStyle: PropTypes.string,
+  textStyle: PropTypes.string,
+  borderStyle: PropTypes.string,
   btnType: PropTypes.oneOf(['button', 'submit', 'reset']),
   onBtnClick: PropTypes.func,
   disabled: PropTypes.bool,

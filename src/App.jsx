@@ -1,11 +1,26 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navbar } from "./components";
+import { Hero } from "./sections";
+
+
 export default function App() {
   return (
-    <>
-      <div className="h-screen bg-teal-500">
-        <h1 className="text-3xl text-center font-bold underline">
-          Hello world!
-        </h1>
-      </div>
-    </>
+    <main className="font-baseFont">
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <Navbar/>
+                <section>
+                  <Hero/>
+                </section>
+              </div>
+            }
+          />
+        </Routes>
+      </Router>
+    </main>
   )
 }
