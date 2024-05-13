@@ -69,13 +69,13 @@ const Menu = () => {
         <AnimatePresence>
             {menuToggle && (
                 <motion.div 
-                    variants={window.innerWidth >= 425 ? menuVariantX : menuVariantY} //for a screensize equal or above 425(from 425 upwards) menuVariant2 is applied.
+                    variants={window.innerWidth >= 320 ? menuVariantX : menuVariantY} //for a screensize equal or above 320(from 320 upwards) menuVariant2 is applied.
                     initial="hidden"
                     animate="visible"
                     exit="exit" // Animate the menu out when it's closed
                     className={`${
                         !menuToggle ? "hidden" : "block"  // Conditionally display the menu based on 'toggle' state.
-                    } absolute right-0 top-0 z-20 w-full min-[425px]:w-4/5 md:w-1/2 h-auto  min-[425px]:h-auto md:h-screen pt-14 md:pt-16 pb-10 pl-2
+                    } absolute right-0 top-0 z-20 w-full min-[320px]:w-4/5 md:w-1/2 h-auto  min-[320px]:h-auto md:h-[600px] pt-14 md:pt-16 pb-10 pl-2
                     backdrop-blur-xl bg-gray-300 dark:bg-gray-800 shadow-lg`}
                 >
 

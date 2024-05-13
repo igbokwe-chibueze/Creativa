@@ -16,7 +16,7 @@ const NavLinks = ({ data, setMenuToggle }) => {
             {data.map((link, index) => (
                 <ul key={index} className="flex flex-col mt-2 lg:mt-0 font-medium lg:flex-row lg:space-x-8">
                     <motion.li
-                        variants={window.innerWidth >= 425 ? childrenVariantX : childrenVariantY}
+                        variants={window.innerWidth >= 320 ? childrenVariantX : childrenVariantY}
                         whileTap={{ scale: 0.7 }}
                         transition={{ type: 'spring', stiffness: 90 }}
                     >
