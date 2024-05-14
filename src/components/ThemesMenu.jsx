@@ -38,16 +38,16 @@ const ThemesMenu = () => {
         >
             <CustomBtn
                 btnType='submit'
-                classProps={`relative group flex justify-center items-center px-2 lg:px-4 py-2 lg:py-2.5 mr-2 lg:mr-2 space-x-2 rounded-none  
-                focus:ring-1 focus:ring-gray-300 dark:focus:ring-gray-800 focus:outline-none `}
+                classProps={`relative group flex justify-center items-center space-x-2 rounded-none `}
                 label={'Themes'} 
-                backgroundStyle={"hover:bg-gray-50 dark:hover:bg-gray-700 "} 
+                backgroundStyle={"hover:bg-skin-fill-muted2-hover"}
+                textStyle={"text-skin-muted2 font-medium text-sm "}
                 borderStyle={' '} 
-                textStyle={"text-gray-800 dark:text-white font-medium text-sm "}
+                focusStyle={' '}
                 disabled={false}  // Disable the button during download
                 onBtnClick={() => setMenuToggle(!menuToggle)} // Toggle the 'toggle' state when the icon is clicked.
             >
-                <div className=" w-6 h-[17px] bg-black"/>
+                <div className=" w-6 h-[17px] bg-black rounded"/>
                 
                 <AngleRightIcon 
                     className={`group-hover:${!menuToggle ? 'rotate-90 transition-transform duration-700 ease-in-out' : ''}
@@ -65,13 +65,13 @@ const ThemesMenu = () => {
                         animate="visible"
                         exit="exit" // Animate the menu out when it's closed
                         className={`${!menuToggle ? "hidden" : "block"}
-                        z-20 md:absolute  -left-[325px] md:mt-4 font-normal 
-                        bg-gray-300 dark:bg-gray-800 lg:dark:bg-gray-600 md:rounded-lg md:shadow 
-                        w-full md:w-auto px-4 `}
+                        z-20 md:absolute -left-[325px] md:mt-4 w-full md:w-auto px-4 font-normal 
+                        bg-skin-fill-muted2 md:rounded-lg md:shadow `}
                     >
+                        <p className="text-sm text-skin-muted2 py-2">Choose primary color:</p>
 
                         {/* Rendering setting links */}
-                        <div className=" grid grid-cols-2 md:grid-cols-3 py-2 text-sm text-gray-700 dark:text-gray-200">
+                        <div className=" grid grid-cols-2 md:grid-cols-3 py-2 text-sm text-skin-muted2">
                             {themes.map((link, index) => (
                                 <motion.button type="button"
                                     key={index}
@@ -80,8 +80,7 @@ const ThemesMenu = () => {
                                     transition={{ type: 'spring', stiffness: 90 }}
 
                                     onClick={() => setMenuToggle(false)}
-                                    className="flex justify-start items-center px-2 py-2
-                                    hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white rounded"
+                                    className="flex justify-start items-center px-2 py-2 hover:bg-skin-fill-muted2-hover rounded"
                                 >
                                     <div className={`w-6 h-[17px] rounded-sm mr-2 ${link.color}`}/>
 

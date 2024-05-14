@@ -9,6 +9,7 @@ const CustomBtn = ({
   backgroundStyle,
   textStyle,
   borderStyle,
+  focusStyle,
   btnType,
   onBtnClick,
   disabled,
@@ -21,12 +22,12 @@ const CustomBtn = ({
 
   return (
     <button
-      className={`inline-flex items-center justify-center px-5 py-3
-        rounded-lg focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900
+      className={`inline-flex items-center justify-center px-5 py-3 rounded-lg 
         disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
-        ${backgroundStyle ? `${backgroundStyle}` : "bg-blue-700 hover:bg-blue-800"}
-        ${textStyle ? `${textStyle}` : "text-white text-base font-medium text-center"} 
+        ${backgroundStyle ? `${backgroundStyle}` : " bg-skin-button-accent hover:bg-skin-button-accent-hover"}
+        ${textStyle ? `${textStyle}` : " text-skin-inverted text-base font-medium text-center"} 
         ${borderStyle ? `${borderStyle}` : "border border-red-300" } 
+        ${focusStyle ? `${focusStyle}` : 'focus:ring-4 focus:ring-skin-focus2' }
       `}
       type={btnType || "button"}
       onClick={handleClick}
@@ -41,7 +42,7 @@ const CustomBtn = ({
         <img
           src={iconURL}
           alt='arrow right icon'
-          className='ml-2 rounded-full bg-white w-5 h-5'
+          className='ml-2 rounded-full bg-skin-fill w-5 h-5'
         />
       )}
       
@@ -60,6 +61,7 @@ CustomBtn.propTypes = {
   backgroundStyle: PropTypes.string,
   textStyle: PropTypes.string,
   borderStyle: PropTypes.string,
+  focusStyle: PropTypes.string,
   btnType: PropTypes.oneOf(['button', 'submit', 'reset']),
   onBtnClick: PropTypes.func,
   disabled: PropTypes.bool,

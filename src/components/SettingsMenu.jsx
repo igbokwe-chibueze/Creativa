@@ -39,20 +39,19 @@ const SettingsMenu = () => {
     <div>
         <motion.div
             whileTap={{ scale: 0.97 }}
-            className=" w-fit "
+            className=" w-fit"
         >
             <CustomBtn
                 btnType='submit'
-                classProps={`relative group flex justify-center items-center px-4 lg:px-5 py-2 lg:py-2.5 mr-2 lg:mr-2 rounded-lg 
-                focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-800 focus:outline-none`}
+                classProps={`relative group flex justify-center items-center px-4 lg:px-5 py-2 lg:py-2.5 mr-2 lg:mr-2 rounded-lg `}
                 label={'Settings'} 
-                backgroundStyle={"hover:bg-gray-50 dark:hover:bg-gray-700 "} 
+                backgroundStyle={"hover:bg-skin-fill-muted-hover"}
+                textStyle={"text-skin-base font-medium text-sm "}
                 borderStyle={' '} 
-                textStyle={"text-gray-800 dark:text-white font-medium text-sm "}
+                focusStyle={'focus:ring-4 focus:ring-skin-focus'}
                 disabled={false}  // Disable the button during download
                 onBtnClick={() => setMenuToggle(!menuToggle)} // Toggle the 'toggle' state when the icon is clicked.
             >
-                {/* <AngleRightIcon className={'ml-[2px] group-hover:rotate-90 transition-transform duration-700 ease-in-out'}/> */}
                 <AngleRightIcon 
                     className={`ml-[2px] group-hover:${!menuToggle ? 'rotate-90 transition-transform duration-700 ease-in-out' : ''}
                         ${menuToggle ? 'rotate-90' : ''}`
@@ -85,11 +84,10 @@ const SettingsMenu = () => {
                     animate="visible"
                     exit="exit" // Animate the menu out when it's closed
                     className={`${!menuToggle ? "hidden" : "block"}
-                    z-20 md:absolute md:mt-4 font-normal bg-gray-300 dark:bg-gray-800 lg:dark:bg-gray-600 md:rounded-lg md:shadow w-full md:w-44 `}
+                    z-20 md:absolute md:mt-4 font-normal bg-skin-fill-muted2 md:rounded-lg md:shadow w-full md:w-44 `}
                 >
-
                     {/* Rendering setting links */}
-                    <ul className=" py-2 text-sm text-gray-700 dark:text-gray-200">
+                    <ul className=" py-2 text-sm text-skin-muted2">
                         {settingsList.map((link, index) => (
                             <motion.li 
                                 key={index}
@@ -100,8 +98,7 @@ const SettingsMenu = () => {
                                 onClick={() => setMenuToggle(false)}
                             >
                                 <a href={link.href} 
-                                    className="block px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white 
-                                    border-b border-gray-100 dark:border-gray-600 lg:dark:border-gray-500"
+                                    className="block px-4 py-2 hover:bg-skin-fill-muted2-hover  border-b border-skin-border2"
                                 >
                                     {link.text}
                                 </a>
@@ -121,8 +118,7 @@ const SettingsMenu = () => {
 
                             href="#" 
                             onClick={() => setMenuToggle(false)}
-                            className="block text-sm text-gray-700 dark:text-gray-200 px-4 py-2 hover:bg-gray-50 
-                            dark:hover:bg-gray-700 dark:hover:text-white"
+                            className="block text-sm text-skin-muted2 px-4 py-2 hover:bg-skin-fill-muted2-hover "
                         >
                             Log In
                         </motion.a>
@@ -136,14 +132,14 @@ const SettingsMenu = () => {
                                 className="sr-only peer"
                             />
                             <div
-                                className={`flex items-center w-11 h-6 rounded-full ${isDarkMode  ? "bg-blue-600" : "bg-gray-200"} 
-                                    peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800`
+                                className={`flex items-center w-11 h-6 rounded-full bg-skin-fill
+                                    peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-skin-focus2`
                                 }
                             >
                                 <div
                                     className={` w-fit p-0.5 shadow-sm rounded-full 
-                                        transition-all duration-300 text-white dark:text-gray-800
-                                        ${isDarkMode  ? "bg-white translate-x-6 rotate-0" : "bg-gray-600 -rotate-180"}`
+                                        transition-all duration-300 text-skin-base-opposite bg-skin-fill4
+                                        ${isDarkMode  ? "translate-x-6 rotate-0" : "-rotate-180"}`
                                     }
                                 >
                                     {isDarkMode  ? <SunIcon className={"w-[18px] h-[18px]"}/> : <MoonIcon className={"w-[18px] h-[18px]"}/>}

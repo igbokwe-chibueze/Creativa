@@ -37,7 +37,8 @@ const Menu = () => {
 
         <button type="button"
             onClick={() => setMenuToggle(!menuToggle)}  // Toggle the 'toggle' state when the icon is clicked.
-            className=" relative z-30 inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className=" relative z-30 inline-flex lg:hidden items-center p-2 ml-1 rounded-lg bg-transparent hover:bg-skin-button-muted-hover
+            text-skin-muted text-sm focus:outline-none focus:ring-4 focus:ring-skin-focus"
         >
             {/* Hamburger svg & close svg*/}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -76,7 +77,7 @@ const Menu = () => {
                     className={`${
                         !menuToggle ? "hidden" : "block"  // Conditionally display the menu based on 'toggle' state.
                     } absolute right-0 top-0 z-20 w-full min-[320px]:w-4/5 md:w-1/2 h-auto  min-[320px]:h-auto md:h-[600px] pt-14 md:pt-16 pb-10 pl-2
-                    backdrop-blur-xl bg-gray-300 dark:bg-gray-800 shadow-lg`}
+                    backdrop-blur-xl bg-skin-fill-muted2 bg-opacity-60 shadow-lg`}
                 >
 
                     {/* Rendering navigation links based */}

@@ -22,9 +22,9 @@ const NavLinks = ({ data, setMenuToggle }) => {
                     >
                         <a href={link.href}
                             onClick={handleMenuToggle} // Call handleMenuToggle instead of directly using setMenuToggle
-                            className="block py-2 pl-3 pr-4 text-gray-700 dark:text-gray-400 border-b border-gray-100 dark:border-gray-700
-                            hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white lg:border-0 lg:hover:text-blue-700 
-                            lg:dark:hover:text-white lg:dark:hover:bg-transparent"
+                            className="block py-2 pl-3 pr-4 hover:bg-skin-fill-muted2-hover lg:dark:hover:bg-transparent
+                             text-skin-muted dark:hover:text-white lg:hover:text-blue-700 lg:dark:hover:text-white
+                            border-b lg:border-0 border-skin-border2 "
                         >
                             {link.text}
                         </a>

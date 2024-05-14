@@ -9,12 +9,12 @@ import SettingsMenu from "./SettingsMenu"
 
 const Navbar = () => {
   return (
-    <nav className=" bg-white dark:bg-gray-800 px-4 lg:px-6 py-2.5 ">
+    <nav className=" dark:theme-dark bg-skin-fill3 px-4 lg:px-6 py-2.5 ">
         <div className=" flex flex-wrap justify-between items-center max-w-screen-xl mx-auto ">
             {/* Logo */}
             <a href=" " className="flex items-center">
                 <img src={creativaLogo} className="h-12 mr-3 sm:h-16" alt="Creativa Logo" />
-                <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Creativa</span>
+                <span className="self-center text-xl font-semibold whitespace-nowrap text-skin-base">Creativa</span>
             </a>
 
             {/* SettingsMenu/GetStarted and Menu */}
@@ -32,9 +32,9 @@ const Navbar = () => {
                             btnType='submit'
                             classProps={`px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none`}
                             label={'Get started'} 
-                            backgroundStyle={"bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"} 
+                            backgroundStyle={"bg-skin-button-accent hover:bg-skin-button-accent-hover"} 
                             borderStyle={' '} 
-                            textStyle={"text-white font-medium text-sm"}
+                            textStyle={"text-skin-inverted font-medium text-sm"}
                             disabled={false}  // Disable the button during download
                         >
                         </CustomBtn>

@@ -3,3 +3,299 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        /* .....Text..... */
+        /* text-gray-900 */
+        --color-text-base: 17, 24, 39;
+        /* text-white */
+        --color-text-base-opposite: 255, 255, 255;
+        /* text-gray-500 */
+        --color-text-muted: 107, 114, 128;
+        /* text-gray-700 */
+        --color-text-muted2: 55, 65, 81;
+        /* text-gray-400 */
+        --color-text-muted3: 156, 163, 175;
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+        /* text-gray-500 */
+        --color-text-icon: 107, 114, 128;
+        /* text-gray-800 */
+        --color-text-icon-hover: 31, 41, 55;
+
+        /* .....Background..... */
+        /* bg-white */
+        --color-fill: 255, 255, 255;
+        /* bg-blue-600 (what would be changing for other theme colors) */
+        --color-fill2: 37, 99, 235;
+        /* bg-gray-200 */
+        --color-fill-muted: 243, 244, 246;
+        /* bg-gray-300 */
+        --color-fill-muted2: 209, 213, 219;
+        /* bg-gray-600 */
+        --color-fill4: 75, 85, 99;
+        /* bg-gray-100 */
+        --color-fill-muted-hover: 229, 231, 235;
+        /* bg-gray-50 */
+        --color-fill-muted2-hover: 249, 250, 251;
+
+        /* .....Buttons..... */
+        /* bg-blue-700 (what would be changing for other theme colors) */
+        --color-button-accent: 29, 78, 216;
+        /* bg-blue-800 (what would be changing for other theme colors) */
+        --color-button-accent-hover: 30, 64, 175;
+        /* --color-button-muted: 99, 102, 241; */
+        /* bg-gray-100 */
+        --color-button-muted-hover: 243, 244, 246;
+
+        /* .....Others..... */
+        /* ring-gray-100 */
+        --color-focus: 243, 244, 246;
+        /* ring-blue-300 */
+        --color-focus2: 147, 197, 253;
+
+        /* border-gray-300 */
+        --color-border: 209, 213, 219;
+        /* border-gray-100 */
+        --color-border2: 243, 244, 246;
+    }
+
+    .theme-dark {
+        /* .....Text..... */
+        /* text-white */
+        --color-text-base: 255, 255, 255;
+        /* text-gray-900 */
+        --color-text-base-opposite: 17, 24, 39;
+        /* text-gray-400 */
+        --color-text-muted: 156, 163, 175;
+        /* text-white */
+        --color-text-muted2: 255, 255, 255;
+        /* text-gray-400 */
+        --color-text-muted3: 156, 163, 175;
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+        /* text-gray-500 */
+        --color-text-icon: 107, 114, 128;
+        /* text-gray-400 */
+        --color-text-icon-hover: 156, 163, 175;
+
+        /* .....Background..... */
+        /* bg-gray-900 */
+        --color-fill: 17, 24, 39;
+        /* bg-blue-600 (what would be changing for other theme colors) */
+        --color-fill2: 37, 99, 235;
+        /* bg-gray-800 (DONT HAVE THIS FOR ROOT)*/
+        --color-fill3: 31, 41, 55;
+        /* bg-white */
+        --color-fill4: 255, 255, 255;
+        /* bg-gray-800 */
+        --color-fill-muted: 31, 41, 55;
+        /* bg-gray-800 */
+        --color-fill-muted2: 31, 41, 55;
+        /* bg-gray-700 */
+        --color-fill-muted-hover: 55, 65, 81;
+        /* bg-gray-700 */
+        --color-fill-muted2-hover: 55, 65, 81;
+        
+        /* .....Buttons..... */
+        /* bg-blue-700 (what would be changing for other theme colors) */
+        --color-button-accent: 29, 78, 216;
+        /* bg-blue-800 (what would be changing for other theme colors) */
+        --color-button-accent-hover: 30, 64, 175;
+        /* --color-button-muted: 99, 102, 241; */
+        /* bg-gray-700 */
+        --color-button-muted-hover: 55, 65, 81;
+
+        /* .....Others..... */
+        /* ring-gray-800 */
+        --color-focus: 31, 41, 55;
+        /* ring-blue-900 */
+        --color-focus2: 30, 58, 138;
+
+        /* border-gray-700 */
+        --color-border: 55, 65, 81;
+        /* border-gray-600 */
+        --color-border2: 75, 85, 99;
+    }
+
+    .theme-red-light {
+        /* .....Text..... */
+        /* text-gray-900 */
+        --color-text-base: 17, 24, 39;
+        /* text-gray-500 */
+        --color-text-muted: 107, 114, 128;
+        /* text-gray-700 */
+        --color-text-muted2: 55, 65, 81;
+        /* text-gray-400 */
+        --color-text-muted3: 156, 163, 175;
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+        /* text-gray-500 */
+        --color-text-icon: 107, 114, 128;
+        /* text-gray-800 */
+        --color-text-icon-hover: 31, 41, 55;
+
+        /* .....Background..... */
+        /* bg-white */
+        --color-fill: 255, 255, 255;
+        /* bg-red-600 (what would be changing for other theme colors) */
+        --color-fill2: 220, 38, 38;
+        /* bg-gray-200 */
+        --color-fill-muted: 243, 244, 246;
+        /* bg-gray-100 */
+        --color-fill-muted-hover: 229, 231, 235;
+
+        /* .....Buttons..... */
+        /* bg-red-700 (what would be changing for other theme colors) */
+        --color-button-accent: 185, 28, 28;
+        /* bg-red-800 (what would be changing for other theme colors)*/
+        --color-button-accent-hover: 153, 27, 27;
+        /* --color-button-muted: 99, 102, 241; */
+        /* bg-gray-100 */
+        --color-button-muted-hover: 243, 244, 246;
+
+        /* .....Others..... */
+        /* ring-gray-100 */
+        --color-focus: 29, 78, 216;
+        /* ring-blue-300 */
+        --color-focus2: 147 197 253;
+        /* border-gray-300 */
+        --color-border: 209, 213, 219;
+    }
+
+    .theme-red-dark {
+        /* .....Text..... */
+        /* text-white */
+        --color-text-base: 255, 255, 255;
+        /* text-gray-400 */
+        --color-text-muted: 156, 163, 175;
+        /* text-white */
+        --color-text-muted2: 255, 255, 255;
+        /* text-gray-400 */
+        --color-text-muted3: 156, 163, 175;
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+        /* text-gray-500 */
+        --color-text-icon: 107, 114, 128;
+        /* text-gray-400 */
+        --color-text-icon-hover: 156, 163, 175;
+
+        /* .....Background..... */
+        /* bg-gray-900 */
+        --color-fill: 17, 24, 39;
+        /* bg-red-600 (what would be changing for other theme colors) */
+        --color-fill2: 220, 38, 38;
+        /* bg-gray-800 */
+        --color-fill-muted: 31, 41, 55;
+        /* bg-gray-700 */
+        --color-fill-muted-hover: 55, 65, 81;
+
+        /* .....Buttons..... */
+        /* bg-red-700 (what would be changing for other theme colors) */
+        --color-button-accent: 185, 28, 28;
+        /* bg-red-800 (what would be changing for other theme colors) */
+        --color-button-accent-hover: 153, 27, 27;
+        /* --color-button-muted: 99, 102, 241; */
+        /* bg-gray-100 */
+        --color-button-muted-hover: 243, 244, 246;
+
+        /* .....Others..... */
+        /* ring-gray-100 */
+        --color-focus: 29, 78, 216;
+        /* ring-blue-300 */
+        --color-focus2: 147 197 253;
+        /* border-gray-300 */
+        --color-border: 209, 213, 219;
+    }
+
+    .theme-purple-light {
+        /* .....Text..... */
+        /* text-gray-900 */
+        --color-text-base: 17, 24, 39;
+        /* text-gray-500 */
+        --color-text-muted: 107, 114, 128;
+        /* text-gray-700 */
+        --color-text-muted2: 55, 65, 81;
+        /* text-gray-400 */
+        --color-text-muted3: 156, 163, 175;
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+        /* text-gray-500 */
+        --color-text-icon: 107, 114, 128;
+        /* text-gray-800 */
+        --color-text-icon-hover: 31, 41, 55;
+
+        /* .....Background..... */
+        /* bg-white */
+        --color-fill: 255, 255, 255;
+        /* bg-purple-600 (what would be changing for other theme colors) */
+        --color-fill2: 147, 51, 234;
+        /* bg-gray-200 */
+        --color-fill-muted: 243, 244, 246;
+        /* bg-gray-100 */
+        --color-fill-muted-hover: 229, 231, 235;
+
+        /* .....Buttons..... */
+        /* bg-purple-700 (what would be changing for other theme colors) */
+        --color-button-accent: 126, 34, 206;
+        /* bg-purple-800 (what would be changing for other theme colors)*/
+        --color-button-accent-hover: 107, 33, 168;
+        /* --color-button-muted: 99, 102, 241; */
+        /* bg-gray-100 */
+        --color-button-muted-hover: 243, 244, 246;
+
+        /* .....Others..... */
+        /* ring-gray-100 */
+        --color-focus: 29, 78, 216;
+        /* ring-blue-300 */
+        --color-focus2: 147 197 253;
+        /* border-gray-300 */
+        --color-border: 209, 213, 219;
+    }
+
+    .theme-purple-dark {
+        /* .....Text..... */
+        /* text-white */
+        --color-text-base: 255, 255, 255;
+        /* text-gray-400 */
+        --color-text-muted: 156, 163, 175;
+        /* text-white */
+        --color-text-muted2: 255, 255, 255;
+        /* text-gray-400 */
+        --color-text-muted3: 156, 163, 175;
+        /* text-white */
+        --color-text-inverted: 255, 255, 255;
+        /* text-gray-500 */
+        --color-text-icon: 107, 114, 128;
+        /* text-gray-400 */
+        --color-text-icon-hover: 156, 163, 175;
+
+        /* .....Background..... */
+        /* bg-gray-900 */
+        --color-fill: 17, 24, 39;
+        /* bg-red-600 (what would be changing for other theme colors) */
+        --color-fill2: 147, 51, 234;
+        /* bg-gray-800 */
+        --color-fill-muted: 31, 41, 55;
+        /* bg-gray-700 */
+        --color-fill-muted-hover: 55, 65, 81;
+
+        /* .....Buttons..... */
+        /* bg-red-700 (what would be changing for other theme colors) */
+        --color-button-accent: 126, 34, 206;
+        /* bg-red-800 (what would be changing for other theme colors) */
+        --color-button-accent-hover: 107, 33, 168;
+        /* --color-button-muted: 99, 102, 241; */
+        /* bg-gray-100 */
+        --color-button-muted-hover: 243, 244, 246;
+
+        /* .....Others..... */
+        /* ring-gray-100 */
+        --color-focus: 29, 78, 216;
+        /* ring-blue-300 */
+        --color-focus2: 147 197 253;
+        /* border-gray-300 */
+        --color-border: 209, 213, 219;
+    }
+}
