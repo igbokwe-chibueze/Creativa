@@ -1,3 +1,4 @@
+import { offcie1, office2 } from "../assets/pngs";
 import MotionWrap from "../wrappers/MotionWrap"
 
 const Content = MotionWrap(() => {
@@ -22,11 +23,11 @@ const Content = MotionWrap(() => {
             {/* Right Column */}
             <div className=" grid grid-cols-2 gap-4 mt-8 ">
                 <img 
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" alt="office content 1"
+                    src={offcie1} alt="office content 1"
                     className="w-full rounded-lg"
                 />
                 <img 
-                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" alt="office content 2"
+                    src={office2} alt="office content 2"
                     className="w-full mt-4 rounded-lg lg:mt-10"
                 />
             </div>
