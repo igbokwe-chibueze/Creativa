@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Navbar } from "./components";
-import { Hero } from "./sections";
+import { Content, Hero } from "./sections";
 
 
 export default function App() {
@@ -15,6 +15,7 @@ export default function App() {
                 <Navbar/>
                 <section className=" dark:theme-dark ">
                   <Hero/>
+                  <Content/>
                 </section>
               </div>
             }
