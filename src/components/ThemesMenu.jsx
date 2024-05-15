@@ -38,16 +38,16 @@ const ThemesMenu = () => {
         >
             <CustomBtn
                 btnType='submit'
-                classProps={`relative group flex justify-center items-center space-x-2 rounded-none `}
+                classProps={` relative group flex justify-center items-center rounded-none space-x-2 `}
                 label={'Themes'} 
-                backgroundStyle={"hover:bg-skin-fill-muted2-hover"}
-                textStyle={"text-skin-muted2 font-medium text-sm "}
+                backgroundStyle={" hover:bg-skin-fill-muted2-hover "}
+                textStyle={" text-sm font-medium text-skin-muted2 "}
                 borderStyle={' '} 
                 focusStyle={' '}
                 disabled={false}  // Disable the button during download
                 onBtnClick={() => setMenuToggle(!menuToggle)} // Toggle the 'toggle' state when the icon is clicked.
             >
-                <div className=" w-6 h-[17px] bg-black rounded"/>
+                <div className= {` w-6 h-[17px] rounded bg-black `} />
                 
                 <AngleRightIcon 
                     className={`group-hover:${!menuToggle ? 'rotate-90 transition-transform duration-700 ease-in-out' : ''}
@@ -66,9 +66,9 @@ const ThemesMenu = () => {
                         exit="exit" // Animate the menu out when it's closed
                         className={`${!menuToggle ? "hidden" : "block"}
                         z-20 md:absolute -left-[325px] md:mt-4 w-full md:w-auto px-4 font-normal 
-                        bg-skin-fill-muted2 md:rounded-lg md:shadow `}
+                        bg-skin-fill-muted2 md:rounded-lg md:shadow bg-opacity-0 md:bg-opacity-100 `}
                     >
-                        <p className="text-sm text-skin-muted2 py-2">Choose primary color:</p>
+                        <p className=" text-sm text-skin-muted2 py-2 ">Choose primary color:</p>
 
                         {/* Rendering setting links */}
                         <div className=" grid grid-cols-2 md:grid-cols-3 py-2 text-sm text-skin-muted2">
@@ -80,9 +80,9 @@ const ThemesMenu = () => {
                                     transition={{ type: 'spring', stiffness: 90 }}
 
                                     onClick={() => setMenuToggle(false)}
-                                    className="flex justify-start items-center px-2 py-2 hover:bg-skin-fill-muted2-hover rounded"
+                                    className=" flex justify-start items-center px-2 py-2 hover:bg-skin-fill-muted2-hover rounded "
                                 >
-                                    <div className={`w-6 h-[17px] rounded-sm mr-2 ${link.color}`}/>
+                                    <div className={` w-6 h-[17px] rounded-sm mr-2 ${link.color} `}/>
 
                                     {link.text}
                                 </motion.button>

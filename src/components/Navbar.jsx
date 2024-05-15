@@ -13,8 +13,8 @@ const Navbar = () => {
         <div className=" flex flex-wrap justify-between items-center max-w-screen-xl mx-auto ">
             {/* Logo */}
             <a href=" " className="flex items-center">
-                <img src={creativaLogo} className="h-12 mr-3 sm:h-16" alt="Creativa Logo" />
-                <span className="self-center text-xl font-semibold whitespace-nowrap text-skin-base">Creativa</span>
+                <img src={creativaLogo} className=" h-12 sm:h-16 mr-3 " alt="Creativa Logo" />
+                <span className=" text-xl font-semibold text-skin-base self-center whitespace-nowrap ">Creativa</span>
             </a>
 
             {/* SettingsMenu/GetStarted and Menu */}
@@ -34,7 +34,7 @@ const Navbar = () => {
                             label={'Get started'} 
                             backgroundStyle={"bg-skin-button-accent hover:bg-skin-button-accent-hover"} 
                             borderStyle={' '} 
-                            textStyle={"text-skin-inverted font-medium text-sm"}
+                            textStyle={" text-sm font-medium text-skin-inverted "}
                             disabled={false}  // Disable the button during download
                         >
                         </CustomBtn>

@@ -46,7 +46,7 @@ const SettingsMenu = () => {
                 classProps={`relative group flex justify-center items-center px-4 lg:px-5 py-2 lg:py-2.5 mr-2 lg:mr-2 rounded-lg `}
                 label={'Settings'} 
                 backgroundStyle={"hover:bg-skin-fill-muted-hover"}
-                textStyle={"text-skin-base font-medium text-sm "}
+                textStyle={" text-sm font-medium text-skin-base "}
                 borderStyle={' '} 
                 focusStyle={'focus:ring-4 focus:ring-skin-focus'}
                 disabled={false}  // Disable the button during download
@@ -84,10 +84,10 @@ const SettingsMenu = () => {
                     animate="visible"
                     exit="exit" // Animate the menu out when it's closed
                     className={`${!menuToggle ? "hidden" : "block"}
-                    z-20 md:absolute md:mt-4 font-normal bg-skin-fill-muted2 md:rounded-lg md:shadow w-full md:w-44 `}
+                    z-20 md:absolute md:mt-4 bg-skin-fill-muted2 md:rounded-lg md:shadow w-full md:w-44 font-normal bg-opacity-0 md:bg-opacity-100 `}
                 >
                     {/* Rendering setting links */}
-                    <ul className=" py-2 text-sm text-skin-muted2">
+                    <ul className=" py-2 text-sm text-skin-muted2 ">
                         {settingsList.map((link, index) => (
                             <motion.li 
                                 key={index}
@@ -98,7 +98,7 @@ const SettingsMenu = () => {
                                 onClick={() => setMenuToggle(false)}
                             >
                                 <a href={link.href} 
-                                    className="block px-4 py-2 hover:bg-skin-fill-muted2-hover  border-b border-skin-border2"
+                                    className=" block px-4 py-2 hover:bg-skin-fill-muted2-hover border-b border-skin-border2 "
                                 >
                                     {link.text}
                                 </a>
@@ -110,7 +110,7 @@ const SettingsMenu = () => {
                     <ThemesMenu/>
 
                     {/* Bottom Links/Buttons */}
-                    <div className="flex flex-wrap justify-start items-center mt-2 space-x-4 pb-2 ">
+                    <div className=" flex flex-wrap justify-start items-center mt-2 pb-2 space-x-4 ">
 
                         {/* Log In Button */}
                         <motion.a
@@ -118,13 +118,13 @@ const SettingsMenu = () => {
 
                             href="#" 
                             onClick={() => setMenuToggle(false)}
-                            className="block text-sm text-skin-muted2 px-4 py-2 hover:bg-skin-fill-muted2-hover "
+                            className=" block px-4 py-2 hover:bg-skin-fill-muted2-hover text-sm text-skin-muted2 "
                         >
                             Log In
                         </motion.a>
 
                         {/* Toggle Dark Mode */}
-                        <label className="inline-flex items-center cursor-pointer">
+                        <label className=" inline-flex items-center cursor-pointer ">
                             <input
                                 type="checkbox"
                                 checked={isDarkMode}
@@ -132,17 +132,16 @@ const SettingsMenu = () => {
                                 className="sr-only peer"
                             />
                             <div
-                                className={`flex items-center w-11 h-6 rounded-full bg-skin-fill
-                                    peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-skin-focus2`
-                                }
+                                className=" flex items-center w-11 h-6 rounded-full bg-skin-fill
+                                peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-skin-focus2 "
                             >
                                 <div
                                     className={` w-fit p-0.5 shadow-sm rounded-full 
-                                        transition-all duration-300 text-skin-base-opposite bg-skin-fill4
+                                        transition-all duration-300 bg-skin-fill4 text-skin-base-opposite
                                         ${isDarkMode  ? "translate-x-6 rotate-0" : "-rotate-180"}`
                                     }
                                 >
-                                    {isDarkMode  ? <SunIcon className={"w-[18px] h-[18px]"}/> : <MoonIcon className={"w-[18px] h-[18px]"}/>}
+                                    {isDarkMode  ? <SunIcon className={" w-[18px] h-[18px] "}/> : <MoonIcon className={" w-[18px] h-[18px] "}/>}
                                 </div>
                             </div>
                         </label>

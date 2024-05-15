@@ -38,7 +38,7 @@ const Menu = () => {
         <button type="button"
             onClick={() => setMenuToggle(!menuToggle)}  // Toggle the 'toggle' state when the icon is clicked.
             className=" relative z-30 inline-flex lg:hidden items-center p-2 ml-1 rounded-lg bg-transparent hover:bg-skin-button-muted-hover
-            text-skin-muted text-sm focus:outline-none focus:ring-4 focus:ring-skin-focus"
+            text-sm text-skin-muted focus:outline-none focus:ring-4 focus:ring-skin-focus"
         >
             {/* Hamburger svg & close svg*/}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -76,7 +76,7 @@ const Menu = () => {
                     exit="exit" // Animate the menu out when it's closed
                     className={`${
                         !menuToggle ? "hidden" : "block"  // Conditionally display the menu based on 'toggle' state.
-                    } absolute right-0 top-0 z-20 w-full min-[320px]:w-4/5 md:w-1/2 h-auto  min-[320px]:h-auto md:h-[600px] pt-14 md:pt-16 pb-10 pl-2
+                    } absolute right-0 top-0 z-20 w-full min-[320px]:w-4/5 md:w-1/2 h-auto min-[320px]:h-auto md:h-[600px] pt-14 md:pt-16 pb-10 pl-2
                     backdrop-blur-xl bg-skin-fill-muted2 bg-opacity-60 shadow-lg`}
                 >
 
@@ -87,17 +87,17 @@ const Menu = () => {
                     <div className=" md:hidden justify-start items-center mt-4 space-y-2 ">
                         <SettingsMenu/>
 
+                        {/* Get Started Btn */}
                         <motion.div
                             whileTap={{ scale: 0.97 }}
-                            className="w-fit"
                         >
                             <CustomBtn
                                 btnType='submit'
-                                classProps={`px-4 lg:px-5 py-2 lg:py-2.5 focus:outline-none`}
+                                classProps={`px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none`}
                                 label={'Get started'} 
-                                backgroundStyle={"bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700"} 
+                                backgroundStyle={"bg-skin-button-accent hover:bg-skin-button-accent-hover"} 
                                 borderStyle={' '} 
-                                textStyle={"text-white font-medium text-sm"}
+                                textStyle={" text-sm font-medium text-skin-inverted "}
                                 disabled={false}  // Disable the button during download
                                 onBtnClick={() => setMenuToggle(false)}
                             >

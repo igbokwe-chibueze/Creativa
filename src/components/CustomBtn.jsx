@@ -24,25 +24,25 @@ const CustomBtn = ({
     <button
       className={`inline-flex items-center justify-center px-5 py-3 rounded-lg 
         disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
-        ${backgroundStyle ? `${backgroundStyle}` : " bg-skin-button-accent hover:bg-skin-button-accent-hover"}
-        ${textStyle ? `${textStyle}` : " text-skin-inverted text-base font-medium text-center"} 
-        ${borderStyle ? `${borderStyle}` : "border border-red-300" } 
-        ${focusStyle ? `${focusStyle}` : 'focus:ring-4 focus:ring-skin-focus2' }
+        ${backgroundStyle ? `${backgroundStyle}` : " bg-skin-button-accent hover:bg-skin-button-accent-hover "}
+        ${textStyle ? `${textStyle}` : " text-base font-medium text-center text-skin-inverted "} 
+        ${borderStyle ? `${borderStyle}` : " border border-red-300  "} 
+        ${focusStyle ? `${focusStyle}` : " focus:ring-4 focus:ring-skin-focus2 "}
       `}
       type={btnType || "button"}
       onClick={handleClick}
       disabled={disabled}
     >
-      <p className={showLabelOnHover ? "hidden group-hover:flex" : ""}>
-        {label || "See More"}
+      <p className={showLabelOnHover ? " hidden group-hover:flex  " : ""}>
+        {label || 'See More'}
       </p>
 
       {/* Use the iconUrl if i want to use an svg icon */}
       {iconURL && (
         <img
           src={iconURL}
-          alt='arrow right icon'
-          className='ml-2 rounded-full bg-skin-fill w-5 h-5'
+          alt='icon'
+          className=" ml-2 w-5 h-5 rounded-full bg-skin-fill "
         />
       )}
       
