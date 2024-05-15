@@ -13,7 +13,7 @@ export default function App() {
             element={
               <div>
                 <Navbar/>
-                <section className=" dark:theme-dark ">
+                <section className=" dark:theme-dark bg-skin-fill">
                   <Hero/>
                   <Content/>
                 </section>
