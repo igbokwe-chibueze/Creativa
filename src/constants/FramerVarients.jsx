@@ -1,4 +1,19 @@
 
+export const sectionsVariantY = {
+  hidden: {
+    y: '100vh',
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'tween',
+      duration: 1.5,
+    }
+  }
+};
+
 //Slides the menu in from the top of the screen and exist in reverse order.
 export const menuVariantY = {
   hidden: {

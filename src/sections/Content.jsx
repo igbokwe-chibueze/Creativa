@@ -1,5 +1,6 @@
+import MotionWrap from "../wrappers/MotionWrap"
 
-const Content = () => {
+const Content = MotionWrap(() => {
   return (
     <section className=" bg-skin-fill ">
         <div className=" max-w-screen-xl mx-auto items-center lg:grid lg:grid-cols-2 gap-16 px-4 lg:px-6 py-8 lg:py-16 ">
@@ -32,6 +33,6 @@ const Content = () => {
         </div>
     </section>
   )
-}
+},);
 
 export default Content

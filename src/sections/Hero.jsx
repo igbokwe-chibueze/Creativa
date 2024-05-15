@@ -2,9 +2,10 @@ import { motion } from "framer-motion";
 import { AngleRightIcon, ArrowRightIcon, VideoCameraIcon } from "../assets/Icons"
 import { featuredCompanies } from "../constants/Data"
 import { CustomBtn } from "../components";
+import MotionWrap from "../wrappers/MotionWrap";
 
 
-const Hero = () => {
+const Hero = MotionWrap(() => {
   return (
     <section className=" bg-skin-fill ">
         <div className=" max-w-screen-xl mx-auto text-center px-4 lg:px-12 py-8 lg:py-16 ">
@@ -97,6 +98,6 @@ const Hero = () => {
         </div>
     </section>
   )
-}
+},);
 
 export default Hero
