@@ -9,7 +9,6 @@ const Hero = MotionWrap(() => {
   return (
     <section className=" bg-skin-fill ">
         <div className=" max-w-screen-xl mx-auto text-center px-4 lg:px-12 py-8 lg:py-16 ">
-        {/* <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-12"> */}
             {/* Alert */}
             <motion.a
                 whileTap={{ scale: 0.97 }}

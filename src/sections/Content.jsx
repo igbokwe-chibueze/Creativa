@@ -3,7 +3,7 @@ import MotionWrap from "../wrappers/MotionWrap"
 
 const Content = MotionWrap(() => {
   return (
-    <section className=" bg-skin-fill ">
+    <section className="  ">
         <div className=" max-w-screen-xl mx-auto items-center lg:grid lg:grid-cols-2 gap-16 px-4 lg:px-6 py-8 lg:py-16 ">
             {/* Left Column */}
             <div className=" sm:text-lg text-skin-muted ">

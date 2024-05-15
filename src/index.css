@@ -24,7 +24,7 @@
 
         /* text-gray-500 */
         --color-text-icon: 107, 114, 128;
-        /* text-blue-600 */
+        /* text-blue-600 (what would be changing for other theme colors) */
         --color-text-icon2: 37, 99, 235;
         /* text-gray-800 */
         --color-text-icon-hover: 31, 41, 55;
@@ -95,7 +95,7 @@
 
         /* text-gray-500 */
         --color-text-icon: 107, 114, 128;
-        /* text-blue-300 */
+        /* text-blue-300 (what would be changing for other theme colors) */
         --color-text-icon2: 147, 197, 253;
         /* text-gray-400 */
         --color-text-icon-hover: 156, 163, 175;

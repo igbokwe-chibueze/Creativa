@@ -12,6 +12,7 @@ const MotionWrap = (Component, classNames) => function HOC() {
     <motion.div
       // Set motion properties for the wrapped component
       whileInView={{ y: [100, 0], opacity: [0, 1] }} // Animation effect for horizontal sliding from left and opacity change from transparent to full
+      viewport={{ once: true }}
       transition={{ duration: 1.5 }}
       className={`${classNames}`} // Apply custom class names.
     >

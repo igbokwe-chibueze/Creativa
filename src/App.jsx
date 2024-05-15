@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { Navbar } from "./components";
-import { Content, Feature, Hero } from "./sections";
+import { CTASection, Content, Feature, Hero } from "./sections";
 
 
 export default function App() {
@@ -17,6 +17,7 @@ export default function App() {
                   <Hero/>
                   <Content/>
                   <Feature/>
+                  <CTASection/>
                 </section>
               </div>
             }

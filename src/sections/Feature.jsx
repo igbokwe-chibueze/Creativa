@@ -1,9 +1,16 @@
+import { motion } from "framer-motion"
 import { features } from "../constants/Data"
 
 const Feature = () => {
   return (
-    <section className=" bg-skin-fill ">
-        <div className=" max-w-screen-xl mx-auto px-4 lg:px-6 py-8 sm:py-16 ">
+    <section className="  ">
+        <motion.div
+            whileInView={{ y: [100, 0], opacity: [0, 1] }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5 }}
+
+            className=" max-w-screen-xl mx-auto px-4 lg:px-6 py-8 sm:py-16 "
+        >
             <div className=" max-w-screen-md mb-8 lg:mb-16 ">
                 <h2 className=" mb-4 text-4xl font-extrabold tracking-tight text-skin-base ">
                     Crafted with business teams like yours in mind.
@@ -24,7 +31,7 @@ const Feature = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     </section>
   )
 }
