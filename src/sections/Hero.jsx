@@ -97,6 +97,6 @@ const Hero = MotionWrap(() => {
         </div>
     </section>
   )
-},);
+}, "", { once: false });
 
 export default Hero

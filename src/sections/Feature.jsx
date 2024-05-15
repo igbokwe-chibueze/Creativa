@@ -6,18 +6,18 @@ const Feature = () => {
     <section className="  ">
         <motion.div
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
-            viewport={{ once: true }}
+            //viewport={{ once: true }}
             transition={{ duration: 1.5 }}
 
             className=" max-w-screen-xl mx-auto px-4 lg:px-6 py-8 sm:py-16 "
         >
             <div className=" max-w-screen-md mb-8 lg:mb-16 ">
                 <h2 className=" mb-4 text-4xl font-extrabold tracking-tight text-skin-base ">
-                    Crafted with business teams like yours in mind.
+                    Built with business teams like yours in mind.
                 </h2>
                 <p className=" sm:text-xl text-skin-muted ">
-                    At Flowbite, we specialize in markets where technology, innovation, 
-                    and investment converge to unlock enduring value and fuel economic expansion.
+                    At Creativa, our focus lies in markets where the fusion of technology, innovation, 
+                    and investment unlocks lasting value and propels economic growth.
                 </p>
             </div>
             <div className=" md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 space-y-8 md:space-y-0 ">

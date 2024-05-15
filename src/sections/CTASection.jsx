@@ -1,19 +1,50 @@
+import { motion } from "framer-motion"
+import { ArrowRightIcon } from "../assets/Icons"
+import { CustomBtn } from "../components"
+import { dashboardDark, dashboardLight } from "../assets/pngs"
+motion
 
 const CTASection = () => {
   return (
-    <section className="">
-        <div className=" max-w-screen-xl mx-auto items-center gap-8 xl:gap-16 md:grid md:grid-cols-2 px-4 lg:px-6 py-8 sm:py-16 ">
-            <img className="w-full dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image"/>
-            <img className="hidden w-full dark:block" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup-dark.svg" alt="dashboard image"/>
+    <section className=" ">
+        <motion.div 
+            whileInView={{ y: [100, 0], opacity: [0, 1] }}
+            //viewport={{ once: true }}
+            transition={{ duration: 1.5 }}
+
+            className=" max-w-screen-xl mx-auto items-center gap-8 xl:gap-16 md:grid md:grid-cols-2 px-4 lg:px-6 py-8 sm:py-16 "
+        >
+            <img src={dashboardLight} alt="dashboard image" className="w-full dark:hidden"/>
+            <img src={dashboardDark} alt="dashboard image" className="hidden w-full dark:block"/>
             <div className="mt-4 md:mt-0">
-                <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Let&apos;s create more tools and ideas that brings us together.</h2>
-                <p className="mb-6 text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
-                <a href="#" className="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-900">
-                    Get started
-                    <svg className="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
-                </a>
+                <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-skin-base">
+                    Let&apos;s forge additional tools and concepts that unite us
+                </h2>
+                <p className="mb-6 md:text-lg text-skin-muted">
+                    Creativa helps you connect with friends and communities of people who share your interests. 
+                    Connecting with your friends and family as well as discovering new ones is easy with features like Groups.
+                </p>
+                <motion.div
+                    whileTap={{ scale: 0.97 }}
+                    whileHover={{ scale: 1.07 }}
+                    className=" mt-4 w-fit"
+                >
+                    <CustomBtn
+                        btnType='submit'
+                        classProps={`group`}
+                        label={'Get started'} 
+                        backgroundStyle={''} 
+                        borderStyle={"border-0"} //Note: You can also put an empty space here. This overides the default but adds no style.
+                        textStyle={"text-sm font-medium text-center text-skin-inverted"}
+                        disabled={false}  // Disable the button during download
+                    >
+                        <ArrowRightIcon 
+                            className={" ml-2 -mr-1 group-hover:translate-x-2 transition-transform duration-700 ease-in-out "}
+                        />
+                    </CustomBtn>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     </section>
   )
 }

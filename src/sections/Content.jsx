@@ -34,6 +34,6 @@ const Content = MotionWrap(() => {
         </div>
     </section>
   )
-},);
+}, "", { once: false });
 
 export default Content
