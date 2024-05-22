@@ -1,4 +1,6 @@
-import { BriefcaseIcon, DollarIcon, GearIcon, PenIcon, PresentationIcon, ProductHuntIcon, RedditIcon, ScaleIcon, YoutubeIcon } from "../assets/Icons";
+import { BriefcaseIcon, DollarIcon, DribbleIcon, FacebookIcon, GearIcon, GithubIcon, InstagramIcon, PenIcon, 
+    PresentationIcon, ProductHuntIcon, RedditIcon, ScaleIcon, TwitterIcon, YoutubeIcon 
+} from "../assets/Icons";
 
 
 export const navLinks = [
@@ -17,12 +19,12 @@ export const settingsList = [
 ];
 
 export const themes = [
-    {text: 'blue', color: ' bg-blue-400' },
-    {text: 'red', color: ' bg-red-400'},
-    {text: 'green', color: ' bg-green-400'},
-    {text: 'yellow', color: ' bg-yellow-400'},
-    {text: 'purple', color: ' bg-purple-400'},
-];
+    {text: 'sky', color: ' bg-blue-700', theme: 'dark:theme-dark bg-skin-fill' },
+    {text: 'flame', color: ' bg-red-700', theme: 'theme-flame-light dark:theme-flame-dark'},
+    {text: 'moss', color: ' bg-green-700', theme: 'theme-moss-light dark:theme-moss-dark'},
+    {text: 'velvet', color: ' bg-purple-700', theme: 'theme-velvet-light dark:theme-velvet-dark'},
+    {text: 'stone', color: ' bg-stone-700', theme: 'theme-stone-light dark:theme-stone-dark'},
+];    
 
 export const featuredCompanies = [
     { icon: <YoutubeIcon />, href: "#" },
@@ -61,4 +63,37 @@ export const features = [
         description: 'Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.',
         icon: <GearIcon/>, 
     },
+];
+
+export const footerLinks = [
+    {
+      title: "Resources",
+      links: [
+        { text: "Creativa", href: "https://github.com/igbokwe-chibueze" },
+        { text: "Tailwind CSS", href: "https://tailwindcss.com/" }
+      ]
+    },
+    {
+      title: "Follow us",
+      links: [
+        { text: "Github", href: "https://github.com/igbokwe-chibueze" },
+        { text: "Twitter", href: "https://twitter.com/chisteeldomain" },
+        { text: "Instagram", href: "https://www.instagram.com/igbokwe_chibueze_o/" }
+      ]
+    },
+    {
+      title: "Legal",
+      links: [
+        { text: "Privacy Policy", href: "#" },
+        { text: "Terms & Conditions", href: "#" }
+      ]
+    },
+];
+
+export const socialMediaLinks = [
+    { icon: <FacebookIcon/>, url: "#" },
+    { icon: <InstagramIcon/>, url: "https://www.instagram.com/igbokwe_chibueze_o/" },
+    { icon: <TwitterIcon/>, url: "https://twitter.com/chisteeldomain" },
+    { icon: <GithubIcon/>, url: "https://github.com/igbokwe-chibueze" },
+    { icon: <DribbleIcon/>, url: "#" }
 ];

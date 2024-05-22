@@ -39,41 +39,24 @@ const SettingsMenu = () => {
     <div>
         <motion.div
             whileTap={{ scale: 0.97 }}
-            className=" w-fit"
+            className=" w-fit "
         >
             <CustomBtn
                 btnType='submit'
-                classProps={`relative group flex justify-center items-center px-4 lg:px-5 py-2 lg:py-2.5 mr-2 lg:mr-2 rounded-lg `}
+                classProps={` relative group flex justify-center items-center px-4 lg:px-5 py-2 lg:py-2.5 mr-2 lg:mr-2 rounded-lg `}
                 label={'Settings'} 
                 backgroundStyle={"hover:bg-skin-fill-muted-hover"}
                 textStyle={" text-sm font-medium text-skin-base "}
                 borderStyle={' '} 
                 focusStyle={'focus:ring-4 focus:ring-skin-focus'}
                 disabled={false}  // Disable the button during download
-                onBtnClick={() => setMenuToggle(!menuToggle)} // Toggle the 'toggle' state when the icon is clicked.
+                onBtnClick={() => {setMenuToggle(!menuToggle); console.log('clicked');}} // Toggle the 'toggle' state when the icon is clicked.
             >
                 <AngleRightIcon 
-                    className={`ml-[2px] group-hover:${!menuToggle ? 'rotate-90 transition-transform duration-700 ease-in-out' : ''}
-                        ${menuToggle ? 'rotate-90' : ''}`
-                    }
+                    className={`${menuToggle ? 'rotate-90' : 'rotate-0'} transition-transform duration-700 ease-in-out`}
                 />
             </CustomBtn>
         </motion.div>
-
-        {/* OverlayBtn: Closes the menu list when clicking outside of the list. */}
-        {/* <div 
-            className={`${
-                !menuToggle ? "hidden" : "block"  // Conditionally display the menu based on 'toggle' state.
-            } `}
-        >
-            <button type="button"
-                onClick={() => setMenuToggle(false)}
-                tabIndex={-1} // Ensures this button is not accessible by keyboard
-                className="fixed inset-0 bg-black h-screen w-screen cursor-default"
-                // className="fixed inset-0 z-20 bg-transparent h-screen w-screen cursor-default"
-            >
-            </button> 
-        </div> */}
 
         {/* Menu List area */}
         <AnimatePresence>
@@ -145,18 +128,6 @@ const SettingsMenu = () => {
                                 </div>
                             </div>
                         </label>
-
-                        {/* <button
-                            onClick={toggleTheme}
-                        >
-                            {isDarkMode ? (
-                                // Render the first path(moon) when toggle is true
-                                <SunIcon className={"text-black bg-white rounded-full p-1"}/>
-                            ) : (
-                                // Render the second path(sun) when toggle is false
-                                <MoonIcon className={"text-white bg-black rounded-full p-1"}/>
-                            )}
-                        </button> */}
 
                     </div>
                 </motion.div>

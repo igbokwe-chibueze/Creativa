@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import CustomBtn from "./CustomBtn";
 import { AngleRightIcon } from "../assets/Icons";
 import { AnimatePresence, motion } from "framer-motion";
-import { themes } from "../constants/Data";
-import { childrenVariantY2, menuVariantX, menuVariantX2 } from "../constants/FramerVarients";
+import { childrenVariantY2, menuVariantX2, menuVariantY2 } from "../constants/FramerVarients";
+import { useTheme } from "../hooks";
 
 const ThemesMenu = () => {
+
+    const { themeStyle, setThemeStyleByIndex, themes } = useTheme(); // Destructure values from the theme context
 
     // Define a state variable 'menuToggle' and a function 'setMenuToggle' to manage the toggle state.
     const [menuToggle, setMenuToggle] = useState(false);
@@ -32,10 +34,7 @@ const ThemesMenu = () => {
     }, []); // The empty dependency array ensures this effect only runs once when the component is mounted.
   return (
     <>
-        <motion.div
-            whileTap={{ scale: 0.97 }}
-            className=" w-fit "
-        >
+        <div className=" w-fit ">
             <CustomBtn
                 btnType='submit'
                 classProps={` relative group flex justify-center items-center rounded-none space-x-2 `}
@@ -47,11 +46,11 @@ const ThemesMenu = () => {
                 disabled={false}  // Disable the button during download
                 onBtnClick={() => setMenuToggle(!menuToggle)} // Toggle the 'toggle' state when the icon is clicked.
             >
-                <div className= {` w-6 h-[17px] rounded bg-black `} />
+                <div className= {` w-6 h-[17px] rounded ${themes} bg-skin-button-accent `} />
                 
                 <AngleRightIcon 
-                    className={`group-hover:${!menuToggle ? 'rotate-90 transition-transform duration-700 ease-in-out' : ''}
-                        ${menuToggle ? 'rotate-90' : ''}`
+                    className={`group-hover:${!menuToggle ? 'rotate-90' : ''}
+                        ${menuToggle ? 'rotate-90' : ''} rotate-0 transition-transform duration-700 ease-in-out`
                     }
                 />
             </CustomBtn>
@@ -60,39 +59,46 @@ const ThemesMenu = () => {
             <AnimatePresence>
                 {menuToggle && (
                     <motion.div 
-                        variants={window.innerWidth > 425 ? menuVariantX2 : menuVariantX} 
+                        variants={window.innerWidth > 425 ? menuVariantX2 : menuVariantY2} 
                         initial="hidden"
                         animate="visible"
                         exit="exit" // Animate the menu out when it's closed
                         className={`${!menuToggle ? "hidden" : "block"}
-                        z-20 md:absolute -left-[325px] md:mt-4 w-full md:w-auto px-4 font-normal 
+                        z-20 md:absolute -left-[325px] md:mt-4 w-fit px-4 font-normal 
                         bg-skin-fill-muted2 md:rounded-lg md:shadow bg-opacity-0 md:bg-opacity-100 `}
                     >
                         <p className=" text-sm text-skin-muted2 py-2 ">Choose primary color:</p>
 
                         {/* Rendering setting links */}
-                        <div className=" grid grid-cols-2 md:grid-cols-3 py-2 text-sm text-skin-muted2">
-                            {themes.map((link, index) => (
-                                <motion.button type="button"
-                                    key={index}
-                                    variants={window.innerWidth > 425 ? childrenVariantY2 : ''} 
-                                    whileTap={{ scale: 0.7 }}
-                                    transition={{ type: 'spring', stiffness: 90 }}
-
-                                    onClick={() => setMenuToggle(false)}
-                                    className=" flex justify-start items-center px-2 py-2 hover:bg-skin-fill-muted2-hover rounded "
-                                >
-                                    <div className={` w-6 h-[17px] rounded-sm mr-2 ${link.color} `}/>
-
-                                    {link.text}
-                                </motion.button>
-                            ))}
+                        <div className="text-sm text-skin-muted2 pb-2">
+                            <ul className=" grid grid-cols-2 md:grid-cols-3 gap-4 ">
+                                {themes.map((theme, index) => (
+                                    <motion.li 
+                                        key={index}
+                                        variants={window.innerWidth > 425 ? childrenVariantY2 : childrenVariantY2} 
+                                        whileTap={{ scale: 0.7 }}
+                                        transition={{ type: 'spring', stiffness: 90 }}
+                                    >
+                                        <button
+                                            onClick={() => {
+                                                setThemeStyleByIndex(index);
+                                                setMenuToggle(false);
+                                            }}
+                                            className={`flex justify-start items-center px-2 py-2 hover:bg-skin-fill-muted2-hover rounded 
+                                            ${themeStyle === theme.theme ? 'bg-skin-fill-muted2-hover' : ''}`}
+                                        >
+                                            <div className={` w-6 h-[17px] rounded-sm mr-2 ${theme.color} `}/>
+                                            {theme.text}
+                                        </button>
+                                    </motion.li>
+                                ))}
+                            </ul>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
 
-        </motion.div>
+        </div>
     </>
   )
 }

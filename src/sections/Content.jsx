@@ -1,10 +1,18 @@
-import { offcie1, office2 } from "../assets/pngs";
-import MotionWrap from "../wrappers/MotionWrap"
+import { motion } from "framer-motion";
+import { office1, office2 } from "../assets/pngs";
+import { useTheme } from "../hooks/useTheme";
 
-const Content = MotionWrap(() => {
+const Content = () => {
+    const { themeStyle } = useTheme();
   return (
-    <section className="  ">
-        <div className=" max-w-screen-xl mx-auto items-center lg:grid lg:grid-cols-2 gap-16 px-4 lg:px-6 py-8 lg:py-16 ">
+    <section className={`${themeStyle} bg-skin-fill`}>
+        <motion.div 
+            whileInView={{ y: [100, 0], opacity: [0, 1] }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5 }}
+
+            className=" max-w-screen-xl mx-auto items-center lg:grid lg:grid-cols-2 gap-16 px-4 lg:px-6 py-8 lg:py-16 "
+        >
             {/* Left Column */}
             <div className=" sm:text-lg text-skin-muted ">
                 <h2 className=" mb-4 text-4xl font-extrabold tracking-tight text-skin-base ">
@@ -22,18 +30,27 @@ const Content = MotionWrap(() => {
 
             {/* Right Column */}
             <div className=" grid grid-cols-2 gap-4 mt-8 ">
-                <img 
-                    src={offcie1} alt="office content 1"
+                <motion.img 
+                    whileInView={{ y: [70, 0] }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, delay: 0.5 }}
+
+                    src={office1} alt="office content 1"
                     className="w-full rounded-lg"
                 />
-                <img 
+
+                <motion.img 
+                    whileInView={{ y: [-70, 0] }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, delay: 0.5 }}
+
                     src={office2} alt="office content 2"
                     className="w-full mt-4 rounded-lg lg:mt-10"
                 />
             </div>
-        </div>
+        </motion.div>
     </section>
   )
-}, "", { once: false });
+}
 
 export default Content

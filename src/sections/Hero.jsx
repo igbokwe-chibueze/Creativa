@@ -2,13 +2,21 @@ import { motion } from "framer-motion";
 import { AngleRightIcon, ArrowRightIcon, VideoCameraIcon } from "../assets/Icons"
 import { featuredCompanies } from "../constants/Data"
 import { CustomBtn } from "../components";
-import MotionWrap from "../wrappers/MotionWrap";
+import { useTheme } from "../hooks/useTheme";
 
 
-const Hero = MotionWrap(() => {
+const Hero = () => {
+    const { themeStyle } = useTheme();
   return (
-    <section className=" bg-skin-fill ">
-        <div className=" max-w-screen-xl mx-auto text-center px-4 lg:px-12 py-8 lg:py-16 ">
+    <section className={`${themeStyle} bg-skin-fill`}>
+        <motion.div 
+            whileInView={{ y: [100, 0], opacity: [0, 1] }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5 }}
+
+            className=" max-w-screen-xl mx-auto text-center px-4 lg:px-12 py-8 lg:py-16 "
+        >
+            
             {/* Alert */}
             <motion.a
                 whileTap={{ scale: 0.97 }}
@@ -94,9 +102,9 @@ const Hero = MotionWrap(() => {
                     ))}
                 </div>
             </div>
-        </div>
+        </motion.div>
     </section>
   )
-}, "", { once: false });
+}
 
 export default Hero

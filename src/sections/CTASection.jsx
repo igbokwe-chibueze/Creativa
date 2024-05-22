@@ -2,14 +2,15 @@ import { motion } from "framer-motion"
 import { ArrowRightIcon } from "../assets/Icons"
 import { CustomBtn } from "../components"
 import { dashboardDark, dashboardLight } from "../assets/pngs"
-motion
+import { useTheme } from "../hooks/useTheme"
 
 const CTASection = () => {
+    const { themeStyle } = useTheme();
   return (
-    <section className=" ">
+    <section className={`${themeStyle} bg-skin-fill`}>
         <motion.div 
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
-            //viewport={{ once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 1.5 }}
 
             className=" max-w-screen-xl mx-auto items-center gap-8 xl:gap-16 md:grid md:grid-cols-2 px-4 lg:px-6 py-8 sm:py-16 "

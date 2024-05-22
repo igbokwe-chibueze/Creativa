@@ -116,7 +116,7 @@ export const menuVariantX2 = {
 
 export const childrenVariantY = {
   hidden: {
-      y: 50,
+      y: 100,
       opacity: 0
   },
   visible: {
@@ -124,14 +124,14 @@ export const childrenVariantY = {
       opacity: 1
   },
   exit: {
-      y: 50,
+      y: 100,
       opacity: 0
   }
 }
 
 export const childrenVariantY2 = {
   hidden: {
-      y: 50,
+      y: -50,
       opacity: 0
   },
   visible: {
