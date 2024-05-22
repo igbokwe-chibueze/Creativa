@@ -2,12 +2,10 @@ import { motion } from "framer-motion"
 import { ArrowRightIcon } from "../assets/Icons"
 import { CustomBtn } from "../components"
 import { dashboardDark, dashboardLight } from "../assets/pngs"
-import { useTheme } from "../hooks/useTheme"
 
 const CTASection = () => {
-    const { themeStyle } = useTheme();
   return (
-    <section className={`${themeStyle} bg-skin-fill`}>
+    <section  id="cta">
         <motion.div 
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             viewport={{ once: true }}

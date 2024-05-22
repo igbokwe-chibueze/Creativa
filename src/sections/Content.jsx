@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { office1, office2 } from "../assets/pngs";
-import { useTheme } from "../hooks/useTheme";
 
 const Content = () => {
-    const { themeStyle } = useTheme();
   return (
-    <section className={`${themeStyle} bg-skin-fill`}>
+    <section id="company">
         <motion.div 
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             viewport={{ once: true }}

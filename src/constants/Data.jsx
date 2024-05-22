@@ -1,15 +1,16 @@
 import { BriefcaseIcon, DollarIcon, DribbleIcon, FacebookIcon, GearIcon, GithubIcon, InstagramIcon, PenIcon, 
     PresentationIcon, ProductHuntIcon, RedditIcon, ScaleIcon, TwitterIcon, YoutubeIcon 
 } from "../assets/Icons";
+import { blackman, blackwoman, blackwoman2, whiteman, whitewoman } from "../assets/pngs";
 
 
 export const navLinks = [
-    { href: '#', text: 'Home' },
-    { href: '#', text: 'Company' },
-    { href: '#', text: 'Marketplace' },
-    { href: '#', text: 'Features' },
-    { href: '#', text: 'Team' },
-    { href: '#', text: 'Contact' },
+    { href: 'home', text: 'Home' },
+    { href: 'company', text: 'Company' },
+    { href: 'features', text: 'Features' },
+    // { href: 'testimonials', text: 'Testimonials' },
+    { href: 'cta', text: 'CTA' },
+    { href: 'footerSection', text: 'FooterSection' },
 ];
 
 export const settingsList = [
@@ -97,3 +98,36 @@ export const socialMediaLinks = [
     { icon: <GithubIcon/>, url: "https://github.com/igbokwe-chibueze" },
     { icon: <DribbleIcon/>, url: "#" }
 ];
+
+export const testimonialsData = [
+    {
+      text: " Creativa has been a game-changer for our development process. The extensive library of predesigned components and pages, from simple forms to complex dashboards, has made building our SaaS applications faster and easier. ",
+      author: "Mwangi Njoroge",
+      position: "CEO at InnovateTech",
+      image: blackman,
+    },
+    {
+      text: "The versatility and ease of use of Creativa are unmatched. It has streamlined our development process, making it easier to create stunning applications quickly.",
+      author: "Sophia Carter",
+      position: "CTO at FutureSoft",
+      image: whitewoman,
+    },
+    {
+      text: "Creativa has revolutionized our approach to web design. The pre-built components are incredibly intuitive and save us so much time. Highly recommend for any development team.",
+      author: "Chioma Adesina",
+      position: "Lead Developer at WebWave",
+      image: blackwoman,
+    },
+    {
+      text: "We integrated Creativa into our workflow, and the results have been phenomenal. The templates are modern and fully customizable, making our projects stand out.",
+      author: "David Johnson",
+      position: "Product Manager at NexaWorks",
+      image: whiteman,
+    },
+    {
+      text: "Creativa offers an exceptional library of components that have significantly reduced our development time. It's a game-changer for our team's productivity.",
+      author: "Amina Okoro",
+      position: "Head of Development at CodeCrafters",
+      image: blackwoman2,
+    },
+  ];

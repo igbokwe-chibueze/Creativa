@@ -1,12 +1,10 @@
 import { creativaLogo } from "../assets/pngs"
 import { footerLinks, socialMediaLinks } from "../constants/Data"
 import { motion } from "framer-motion"
-import { useTheme } from "../hooks/useTheme";
 
 const FooterSection = () => {
-    const { themeStyle } = useTheme();
   return (
-    <footer className={`${themeStyle} bg-skin-fill3 p-4 sm:p-6`}>
+    <footer  id="footerSection" className="bg-skin-fill3 p-4 sm:p-6">
         <div className=" max-w-screen-xl mx-auto ">
 
             {/* Top Half */}

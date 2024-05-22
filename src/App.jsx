@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Navbar } from "./components";
-import { CTASection, Content, Feature, FooterSection, Hero } from "./sections";
 import { ThemeProvider } from './wrappers/ThemeContext';
+import { Sections } from './components';
 
 export default function  App() {
   return (
@@ -12,16 +11,9 @@ export default function  App() {
             <Route
               path="/"
               element={
-                <div>
-                  <Navbar />
-                  <section>
-                    <Hero />
-                    <Content />
-                    <Feature />
-                    <CTASection />
-                    <FooterSection />
-                  </section>
-                </div>
+                <>
+                  <Sections/>
+                </>
               }
             />
           </Routes>

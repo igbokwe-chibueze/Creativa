@@ -1,11 +1,9 @@
 import { motion } from "framer-motion"
 import { features } from "../constants/Data"
-import { useTheme } from "../hooks/useTheme";
 
 const Feature = () => {
-    const { themeStyle } = useTheme();
   return (
-    <section className={`${themeStyle} bg-skin-fill`}>
+    <section id="features">
         <motion.div
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             viewport={{ once: true }}

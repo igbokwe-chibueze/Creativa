@@ -3,6 +3,7 @@ import Content from "./Content";
 import Feature from "./Feature";
 import FooterSection from "./FooterSection";
 import Hero from "./Hero";
+import Testimonials from "./Testimonials";
 
 
 export {
@@ -10,5 +11,6 @@ export {
     Content,
     Feature,
     CTASection,
-    FooterSection    
+    FooterSection,
+    Testimonials    
 }
