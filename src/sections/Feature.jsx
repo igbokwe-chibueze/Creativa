@@ -3,7 +3,7 @@ import { features } from "../constants/Data"
 
 const Feature = () => {
   return (
-    <section id="features">
+    <section id="features" className=" min-h-screen ">
         <motion.div
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             viewport={{ once: true }}

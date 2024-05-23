@@ -3,7 +3,7 @@ import { office1, office2 } from "../assets/pngs";
 
 const Content = () => {
   return (
-    <section id="company">
+    <section id="company" className=" min-h-screen ">
         <motion.div 
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             viewport={{ once: true }}

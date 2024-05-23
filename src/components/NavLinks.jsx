@@ -13,34 +13,47 @@ const NavLinks = ({ data, setMenuToggle }) => {
     };
 
     return (
-        <>
+        <ul 
+            className=" flex flex-col lg:flex-row mt-2 lg:mt-0 lg:space-x-8 "
+        >
             {data.map((link, index) => (
-                <Link
-                    key={index}
-                    to={link.href}
-                    smooth={true}
-                    hashSpy={true}
-                    duration={500}
-                    offset={-90}
-                    spy={true} //Make Link selected when scroll is at its targets position
-                    isDynamic={true}
-                    //activeClass="" //class applied when element is reached
+                <motion.li
+                    variants={window.innerWidth >= 320 ? childrenVariantX : childrenVariantY}
+                    whileTap={{ scale: 0.7 }}
+                    transition={{ type: 'spring', stiffness: 90 }}
 
-                    className="cursor-pointer flex flex-col mt-2 lg:mt-0 font-medium lg:flex-row lg:space-x-8"
-                    onClick={handleMenuToggle}
+                    key={index}
+
+                    className=" font-medium text-skin-muted dark:hover:text-white lg:hover:text-blue-700 
+                    hover:bg-skin-fill-muted2-hover lg:dark:hover:bg-transparent
+                    border-b lg:border-0 border-skin-border2"
+
+                    //This hiddes the last two links in the navLink, i just did it to prevent overflow of the links to the next line.
+                    // className={`font-medium text-skin-muted dark:hover:text-white lg:hover:text-blue-700 
+                    // hover:bg-skin-fill-muted2-hover lg:dark:hover:bg-transparent
+                    // border-b lg:border-0 border-skin-border2 ${
+                    //     index >= data.length - 2 ? 'lg:hidden xl:block 2xl:block' : ''
+                    // }`}
                 >
-                    <motion.div
-                        variants={window.innerWidth >= 320 ? childrenVariantX : childrenVariantY}
-                        whileTap={{ scale: 0.7 }}
-                        transition={{ type: 'spring', stiffness: 90 }}
-                        className="block py-2 pl-3 pr-4 hover:bg-skin-fill-muted2-hover lg:dark:hover:bg-transparent
-                        text-skin-muted dark:hover:text-white lg:hover:text-blue-700 border-b lg:border-0 border-skin-border2 "
+                    <Link
+                        to={link.href}
+                        smooth={true}
+                        hashSpy={true}
+                        duration={500}
+                        //offset={-90}
+                        spy={true} //Make Link selected when scroll is at its targets position
+                        isDynamic={true}
+                        activeClass="text-blue-700" //class applied when element is reached
+
+                        className="cursor-pointer block py-2 pl-3 pr-4"
+                        onClick={handleMenuToggle}
                     >
                         {link.text}
-                    </motion.div>
-                </Link>
+                    </Link>
+
+                </motion.li>
             ))}
-        </>
+        </ul>
     );
 }
 

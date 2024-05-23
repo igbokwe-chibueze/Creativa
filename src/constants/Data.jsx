@@ -5,10 +5,10 @@ import { blackman, blackwoman, blackwoman2, whiteman, whitewoman } from "../asse
 
 
 export const navLinks = [
-    { href: 'home', text: 'Home' },
+    { href: 'hero', text: 'Hero' },
     { href: 'company', text: 'Company' },
     { href: 'features', text: 'Features' },
-    // { href: 'testimonials', text: 'Testimonials' },
+    { href: 'testimonials', text: 'Testimonials' },
     { href: 'cta', text: 'CTA' },
     { href: 'footerSection', text: 'FooterSection' },
 ];

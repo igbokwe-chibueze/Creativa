@@ -713,11 +713,15 @@
 }
 
 @layer components {
-        
+
+        /* Nav Section */
+
+        /*** end nav section ***/
+
         /* Testimonials Section */ 
         .testimonial .slick-arrow.slick-prev,
         .testimonial .slick-arrow.slick-next {
-        @apply w-10 h-10 flex items-center justify-center z-10 rounded-full p-2 md:bg-skin-fill5 md:text-skin-icon2;
+        @apply hidden lg:flex justify-center items-center rounded-full w-10 h-10 p-2 md:bg-skin-fill5 md:text-skin-icon2;
         }
 
         .testimonial .slick-prev::before,
@@ -732,5 +736,5 @@
         .testimonial .slick-center > div {
         @apply transform scale-100;
         }
-        /*** end testimonials section ***/ 
+        /*** end testimonials section ***/
 }

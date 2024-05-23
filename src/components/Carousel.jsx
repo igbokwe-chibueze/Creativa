@@ -44,7 +44,7 @@ const Carousel = ({ data }) => {
     };
 
   return (
-    <section id="carousel">
+    <section>
         <div className=" testimonial ">
             <Slider {...settings}>
                 {data.map((testimonial, index) => (

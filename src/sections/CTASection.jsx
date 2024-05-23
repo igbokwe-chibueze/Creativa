@@ -5,7 +5,7 @@ import { dashboardDark, dashboardLight } from "../assets/pngs"
 
 const CTASection = () => {
   return (
-    <section  id="cta">
+    <section  id="cta" className=" min-h-screen ">
         <motion.div 
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             viewport={{ once: true }}

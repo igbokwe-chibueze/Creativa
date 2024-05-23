@@ -6,7 +6,7 @@ import { CustomBtn } from "../components";
 
 const Hero = () => {
   return (
-    <section id="hero">
+    <section id="hero" className="min-h-screen">
         <motion.div 
             whileInView={{ y: [100, 0], opacity: [0, 1] }}
             viewport={{ once: true }}

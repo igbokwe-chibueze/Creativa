@@ -8,10 +8,11 @@ import SettingsMenu from './SettingsMenu';
 
 const Navbar = () => {
     return (
+        // <nav className={`fixed top-0 right-0 left-0 z-30 bg-skin-fill3 px-4 lg:px-6 py-2.5 `}>
         <nav className={` bg-skin-fill3 px-4 lg:px-6 py-2.5 `}>
             <div className="flex flex-wrap justify-between items-center max-w-screen-xl mx-auto">
                 {/* Logo */}
-                <a href="https://github.com/igbokwe-chibueze" className="flex items-center">
+                <a href="/" className="flex items-center">
                     <img src={creativaLogo} className="h-12 sm:h-16 mr-3" alt="Creativa Logo" />
                     <span className="text-xl font-semibold text-skin-base self-center whitespace-nowrap">Creativa</span>
                 </a>
