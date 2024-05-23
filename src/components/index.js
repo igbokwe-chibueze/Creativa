@@ -1,3 +1,4 @@
+import BackToTop from "./BackToTop";
 import Carousel from "./Carousel";
 import CustomBtn from "./CustomBtn";
 import Menu from "./Menu";
@@ -8,6 +9,7 @@ import SettingsMenu from "./SettingsMenu";
 import ThemeSwitcher from "./ThemeSwitcher";
 import ThemesMenu from "./ThemesMenu";
 
+
 export {
     Sections,
     CustomBtn,
@@ -17,5 +19,6 @@ export {
     Menu,
     SettingsMenu,
     ThemesMenu,
-    Carousel
+    Carousel,
+    BackToTop
 }
