@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { AngleRightIcon, ArrowRightIcon, VideoCameraIcon } from "../assets/Icons"
 import { featuredCompanies } from "../constants/Data"
-import { CustomBtn } from "../components";
+import { CustomBtn, ParallaxText } from "../components";
 
 
 const Hero = () => {
@@ -92,12 +92,17 @@ const Hero = () => {
             {/* Featured Companies */}
             <div className=" md:max-w-screen-md lg:max-w-screen-lg mx-auto px-4 lg:px-36 text-center ">
                 <span className=" font-semibold text-skin-muted3 uppercase ">FEATURED IN</span>
-                <div className=" flex flex-wrap justify-center sm:justify-between items-center mt-8 text-skin-icon ">
-                    {featuredCompanies.map((company, index) => (
-                        <a key={index} href={company.href} className=" mb-5 mr-5 lg:mb-0 hover:text-skin-icon-hover ">
-                            {company.icon}
-                        </a>
-                    ))}
+
+                <div className="mt-8">
+                    <ParallaxText baseVelocity={3} clamp={false}>
+                        <div className="flex justify-center items-center space-x-[40px] md:space-x-[64px]">
+                            {featuredCompanies.map((company, index) => (
+                                <a key={index} href={company.href} className=" text-skin-icon hover:text-skin-icon-hover ">
+                                    {company.icon}
+                                </a>
+                            ))}
+                        </div>
+                    </ParallaxText>
                 </div>
             </div>
         </motion.div>

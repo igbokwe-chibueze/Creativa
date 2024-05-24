@@ -38,7 +38,7 @@ const Carousel = ({ data }) => {
         prevArrow: <PreviousBtn />,
         customPaging: () => (
         <div 
-            className="w-2 h-2 rounded-full m-2 bg-skin-fill-muted2 hover:bg-skin-fill5"
+            className="hidden md:flex w-2 h-2 rounded-full m-2 bg-skin-fill-muted2 hover:bg-skin-fill5"
         ></div>
         ),
     };

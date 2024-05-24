@@ -714,10 +714,6 @@
 
 @layer components {
 
-        /* Nav Section */
-
-        /*** end nav section ***/
-
         /* Testimonials Section */ 
         .testimonial .slick-arrow.slick-prev,
         .testimonial .slick-arrow.slick-next {
@@ -737,4 +733,20 @@
         @apply transform scale-100;
         }
         /*** end testimonials section ***/
+
+        /* Parallax Component */
+        .parallax-mask::before,
+        .parallax-mask::after {
+                @apply content-[''] absolute top-0 bottom-0 w-12 pointer-events-none z-10;
+        }
+
+        .parallax-mask::before {
+                @apply left-0 bg-gradient-to-r from-gray-100 dark:from-gray-900
+        }
+
+        .parallax-mask::after {
+                @apply right-0 bg-gradient-to-l from-gray-100 dark:from-gray-900
+        }
+        /*** end parallax component ***/
+
 }

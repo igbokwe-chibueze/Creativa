@@ -1,5 +1,5 @@
-import { BriefcaseIcon, DollarIcon, DribbleIcon, FacebookIcon, GearIcon, GithubIcon, InstagramIcon, PenIcon, 
-    PresentationIcon, ProductHuntIcon, RedditIcon, ScaleIcon, TwitterIcon, YoutubeIcon 
+import { BriefcaseIcon, CiscoIcon, DollarIcon, DribbleIcon, FacebookIcon, GearIcon, GithubIcon, GoogleIcon, InstagramIcon, PenIcon, 
+  PresentationIcon, ScaleIcon, TwitterIcon, VisaIcon, 
 } from "../assets/Icons";
 import { blackman, blackwoman, blackwoman2, whiteman, whitewoman } from "../assets/pngs";
 
@@ -28,9 +28,9 @@ export const themes = [
 ];    
 
 export const featuredCompanies = [
-    { icon: <YoutubeIcon />, href: "#" },
-    { icon: <ProductHuntIcon />, href: "#" },
-    { icon: <RedditIcon />, href: "#" }
+    { icon: <GoogleIcon/>, href: "#" },
+    { icon: <CiscoIcon/>, href: "#" },
+    { icon: <VisaIcon/>, href: "#" },
 ];
 
 export const features = [
