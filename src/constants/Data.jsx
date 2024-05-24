@@ -13,6 +13,50 @@ export const navLinks = [
     { href: 'footerSection', text: 'FooterSection' },
 ];
 
+// export const navLinks2 = [
+//   {
+//     text: "Dashboard",
+//     href: "#dashboard",
+//   },
+//   {
+//     text: "Services",
+//     href: "#",
+//     subMenu: [
+//       {
+//         text: "Web Development",
+//         href: "#web-development",
+//       },
+//       {
+//         text: "App Development",
+//         href: "#app-development",
+//       },
+//       {
+//         text: "More Services",
+//         href: "#",
+//         subMenu: [
+//           {
+//             text: "SEO",
+//             href: "#seo",
+//           },
+//           {
+//             text: "Marketing",
+//             href: "#marketing",
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     text: "About",
+//     href: "#about",
+//   },
+//   {
+//     text: "Contact",
+//     href: "#contact",
+//   },
+// ];
+
+
 export const settingsList = [
     { href: '#', text: 'Dashboard' },
     { href: '#', text: 'Price' },
