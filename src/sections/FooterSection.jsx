@@ -17,7 +17,7 @@ const FooterSection = () => {
             >
                 {/* Logo */}
                 <div className=" mb-6 md:mb-0 ">
-                    <a href="https://github.com/igbokwe-chibueze" className=" flex items-center ">
+                    <a href="/" className=" flex items-center ">
                         <img src={creativaLogo} className=" h-16 mr-3 " alt="Creativa Logo" />
                         <span className=" text-2xl font-semibold text-skin-base self-center whitespace-nowrap ">Creativa</span>
                     </a>

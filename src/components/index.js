@@ -1,4 +1,4 @@
-import BackToTop from "./BackToTop";
+import BackToTopOrBottom from "./BackToTopOrBottom";
 import Carousel from "./Carousel";
 import CustomBtn from "./CustomBtn";
 import Menu from "./Menu";
@@ -20,6 +20,6 @@ export {
     SettingsMenu,
     ThemesMenu,
     Carousel,
-    BackToTop,
+    BackToTopOrBottom,
     ParallaxText
 }

@@ -1,6 +1,6 @@
 import { useTheme } from "../hooks";
 import { CTASection, Content, Feature, FooterSection, Hero, Testimonials } from "../sections";
-import BackToTop from "./BackToTop";
+import BackToTopOrBottom from "./BackToTopOrBottom";
 import Navbar from "./Navbar"
 
 
@@ -9,7 +9,7 @@ const Sections = () => {
   return (
     <div className={`${themeStyle} bg-skin-fill`}>
         <Navbar/>
-        <BackToTop />
+        <BackToTopOrBottom />
         <section>
             <Hero/>
             <Content/>

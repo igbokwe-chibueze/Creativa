@@ -22,7 +22,7 @@ const CustomBtn = ({
 
   return (
     <button
-      className={`inline-flex items-center justify-center px-5 py-3 rounded-lg 
+      className={`inline-flex items-center justify-center px-5 py-3 rounded-lg transition-colors duration-700 ease-in-out
         disabled:bg-[#81926D] disabled:opacity-90 disabled:cursor-not-allowed ${classProps}
         ${backgroundStyle ? `${backgroundStyle}` : " bg-skin-button-accent hover:bg-skin-button-accent-hover "}
         ${textStyle ? `${textStyle}` : " text-base font-medium text-center text-skin-inverted "} 
